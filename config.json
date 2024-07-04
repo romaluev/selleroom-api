@@ -1,1 +1,23 @@
-[{"name":"MarketPlace","path":"market-places","fields":{"name":"string|required","url":"string|required"},"created":true,"delete":false},{"name":"Shop","path":"shops","fields":{"name":"string|required","url":"string|required","article":"string|required"},"created":true,"delete":false}]
+[
+    {
+        "name": "MarketPlace",
+        "path": "market-places",
+        "fields": {
+            "name": "string|required",
+            "url": "string|required"
+        },
+        "created": true,
+        "delete": false
+    },
+    {
+        "name": "Shop",
+        "path": "shops",
+        "fields": {
+            "name": "string|required",
+            "url": "string|required",
+            "article": "string|required"
+        },
+        "created": true,
+        "delete": false
+    }
+]
