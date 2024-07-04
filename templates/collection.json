@@ -1,0 +1,223 @@
+{
+    "info": {
+        "_postman_id": "5a870d71-5e1d-4c63-8da8-09654602c43c",
+        "name": "%names",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "10783291"
+    },
+    "item": [
+        {
+            "name": "get list of %names",
+            "protocolProfileBehavior": {
+                "disabledSystemHeaders": {
+                    "accept": true
+                }
+            },
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{admin_token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{domain}}/admin/%path",
+                    "host": [
+                        "{{domain}}"
+                    ],
+                    "path": [
+                        "admin",
+                        "%path"
+                    ],
+                    "query": [
+                        {
+                            "key": "all",
+                            "value": "1",
+                            "disabled": true
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "delete one %name",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{admin_token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{domain}}/admin/%path/1",
+                    "host": [
+                        "{{domain}}"
+                    ],
+                    "path": [
+                        "admin",
+                        "%path",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "get one %name",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{admin_token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{domain}}/admin/%path/1",
+                    "host": [
+                        "{{domain}}"
+                    ],
+                    "path": [
+                        "admin",
+                        "%path",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "create new %name",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{admin_token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n \"data\":{\n\t\"title\":{\n\t\t \"uz\":\"O'zbekiston\",\n\t\t \"ru\":\"Узбекистан\"\n\t},\n    \"description\":{\n\t\t \"uz\":\"O'zbekiston\",\n\t\t \"ru\":\"Узбекистан\"\n\t},\n    \"content\":{\n\t\t \"uz\":\"O'zbekiston\",\n\t\t \"ru\":\"Узбекистан\"\n\t},\n\t\"image\":\"https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg\"\n }\n}"
+                },
+                "url": {
+                    "raw": "{{domain}}/admin/%path",
+                    "host": [
+                        "{{domain}}"
+                    ],
+                    "path": [
+                        "admin",
+                        "%path"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "update %name",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "{{admin_token}}",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n \"data\":{\n\t\"title\":{\n\t\t \"uz\":\"O'zbekiston\",\n\t\t \"ru\":\"Узбекистан\"\n\t},\n    \"description\":{\n\t\t \"uz\":\"O'zbekiston\",\n\t\t \"ru\":\"Узбекистан\"\n\t},\n    \"content\":{\n\t\t \"uz\":\"O'zbekiston1\",\n\t\t \"ru\":\"Узбекистан\"\n\t},\n\t\"image\":\"https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg\"\n }\n}"
+                },
+                "url": {
+                    "raw": "{{domain}}/admin/%path/1",
+                    "host": [
+                        "{{domain}}"
+                    ],
+                    "path": [
+                        "admin",
+                        "%path",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "18|TzHjvjR5o17lZVrQBBZk1Z5rV09Wlir3eQGPKKXB",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
